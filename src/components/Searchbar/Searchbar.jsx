@@ -3,7 +3,7 @@ import './Searchbar.scss';
 
 export const Searchbar = () => {
   const [searchParams, setSearchParams] = useSearchParams();
-  // const search = searchParams.get('searchQuery') ?? '';
+  const search = searchParams.get('searchQuery') ?? '';
 
   const handleFormSubmit = event => {
     event.preventDefault();
@@ -22,7 +22,7 @@ export const Searchbar = () => {
           autoComplete="off"
           name="query"
           placeholder="Search movies..."
-          // defaultValue={search}
+          defaultValue={search}
         />
         <button className="search-button" type="submit">
           Search
