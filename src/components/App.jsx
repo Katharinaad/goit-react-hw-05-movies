@@ -1,10 +1,11 @@
 import { Route, Routes } from 'react-router-dom';
 import { Suspense, lazy } from 'react';
 
-import { Navbar, StyledLink } from './App.styled';
-import Loader from './Loader';
+import { Navbar, StyledLink } from './NavigationBar/NavigationBar.styled';
+import Loader from './Loader/Loader';
 
-import HomePage from 'pages/HomePage';
+import HomePage from 'pages/HomePage/HomePage';
+import Movies from 'pages/Movies/Movies';
 
 export const App = () => {
   return (
@@ -18,10 +19,11 @@ export const App = () => {
 
       <Suspense fallback={<Loader />}>
         <Routes>
-          <Route path="/" />
-          <Route index element={<HomePage />} />
-          <Route path="/search" />
-          <Route path="/post-details/:postId/*" />
+          <Route path="/" element={<HomePage />} />
+          <Route path="/movies" element={<Movies />} />
+          <Route path="/movies/:movieId" />
+          <Route path="cast"></Route>
+          <Route path="reviews"></Route>
         </Routes>
       </Suspense>
     </>
