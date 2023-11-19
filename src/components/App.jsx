@@ -1,5 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
-import { Suspense, lazy } from 'react';
+import { Suspense } from 'react';
 
 import { Navbar, StyledLink } from './NavigationBar/NavigationBar.styled';
 import Loader from './Loader/Loader';
