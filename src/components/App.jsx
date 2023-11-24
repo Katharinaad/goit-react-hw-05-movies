@@ -6,6 +6,7 @@ import Loader from './Loader/Loader';
 
 import HomePage from 'pages/HomePage/HomePage';
 import Movies from 'pages/Movies/Movies';
+import MovieDetails from 'pages/MovieDetails/MovieDetails';
 
 export const App = () => {
   return (
@@ -21,9 +22,10 @@ export const App = () => {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/movies" element={<Movies />} />
-          <Route path="/movies/:movieId" />
-          <Route path="cast"></Route>
-          <Route path="reviews"></Route>
+          <Route path="/movies/:movieId" element={<MovieDetails />}>
+            <Route path="cast"></Route>
+            <Route path="reviews"></Route>
+          </Route>
         </Routes>
       </Suspense>
     </>
