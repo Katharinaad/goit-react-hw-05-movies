@@ -10,7 +10,6 @@ export const Navbar = styled.nav`
 `;
 
 export const StyledLink = styled(NavLink)`
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #4c4d52;
   text-decoration: none;
   margin-right: 1rem;
