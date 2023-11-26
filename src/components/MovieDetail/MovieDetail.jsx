@@ -1,6 +1,5 @@
 import './MovieDetail.scss';
-
-import { Link } from 'react-router-dom';
+import { StyledLink } from './MovieDetail.style';
 
 export const MovieDetail = ({ movie }) => {
   if (!movie) {
@@ -34,10 +33,10 @@ export const MovieDetail = ({ movie }) => {
         <h4>Additional Information</h4>
         <ul>
           <li>
-            <Link to="cast">Cast</Link>
+            <StyledLink to="cast">Cast</StyledLink>
           </li>
           <li>
-            <Link to="reviews">Reviews</Link>
+            <StyledLink to="reviews">Reviews</StyledLink>
           </li>
         </ul>
       </div>
