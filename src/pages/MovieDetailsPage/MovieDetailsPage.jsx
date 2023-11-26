@@ -1,8 +1,9 @@
 import Loader from 'components/Loader/Loader';
 import { MovieDetail } from 'components/MovieDetail/MovieDetail';
 import { useEffect, useRef, useState } from 'react';
-import { Link, Outlet, useLocation, useParams } from 'react-router-dom';
+import { Outlet, useLocation, useParams } from 'react-router-dom';
 import { fetchMovieDetailed } from 'services/api';
+import { StyledLink } from './MovieDetailsPage.styled';
 
 const MovieDetailsPage = () => {
   const { movieId } = useParams();
@@ -30,7 +31,7 @@ const MovieDetailsPage = () => {
   return (
     <>
       {isLoading && <Loader />}
-      <Link to={backLinkHref.current}>Go Back</Link>
+      <StyledLink to={backLinkHref.current}>Go Back</StyledLink>
       <MovieDetail movie={movie} />
       <Outlet />
     </>
