@@ -47,8 +47,13 @@
     margin: 5px;
     color: #4c4d52;
   }
-
   ul {
     list-style: none;
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    font-weight: 600;
   }
 }

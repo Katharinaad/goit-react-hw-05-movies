@@ -1,6 +1,6 @@
 import { MovieDetail } from 'components/MovieDetail/MovieDetail';
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Outlet, useParams } from 'react-router-dom';
 import { fetchMovieDetailed } from 'services/api';
 
 const MovieDetailsPage = () => {
@@ -20,7 +20,12 @@ const MovieDetailsPage = () => {
     fetchMovie();
   }, [movieId]);
 
-  return <MovieDetail movie={movie} />;
+  return (
+    <>
+      <MovieDetail movie={movie} />
+      <Outlet />
+    </>
+  );
 };
 
 export default MovieDetailsPage;
